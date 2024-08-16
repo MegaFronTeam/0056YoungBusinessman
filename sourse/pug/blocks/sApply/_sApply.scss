@@ -1,0 +1,97 @@
+// start .sApply
+.sApply {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(32)};
+	--sTPB: #{rem(46)};
+	background: $primary;
+  position: relative;
+  .container {
+    position: relative;
+  }
+
+  .square {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-60%, -40%);
+    max-width: 40vw;
+  }
+
+  .flash {
+    position: absolute;
+    left: 0;
+    width: 110%;
+  }
+
+  .flash-top {
+    bottom: calc(100% - 2px);
+  }
+  .flash-bottom {
+    top: calc(100% - 2px);
+    transform: rotate(180deg) translateX(4%);
+  }
+	.cards-gr {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(40);
+    justify-content: space-between;
+
+    margin-bottom: rem(44);
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 327px);
+    }
+  }
+	.section-title{
+		h2::after {
+      content: none;
+    }
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sApply
+
+
+.counter{
+	counter-reset: num;
+	&__item {
+    text-align: center;
+		position: relative;
+		&::before {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+			content: counter(num);
+			counter-increment: num;
+      --num-width: 100px;
+      --num-font: 40px;
+      margin-bottom: rem(20);
+
+      @include media-breakpoint-up(md) {
+        --num-width: 150px;
+        --num-font: 70px;
+        margin-bottom: rem(38);
+      }
+
+      font-weight: 500;
+      font-size: var(--num-font);
+      width: var(--num-width);
+      height: var(--num-width);
+      border-radius: 50%;
+      border: 7px solid white;
+		}
+    p {
+      max-width: rem(327);
+      margin: auto;
+      text-wrap: pretty;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+	}
+}

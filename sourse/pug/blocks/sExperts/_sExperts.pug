@@ -1,0 +1,30 @@
+mixin sExperts(data)
+	// start sExperts
+	+b.SECTION.sExperts.section#sExperts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наши эксперты
+			+arrow
+			+e.slider--js
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+card('Вадим Кульков', 'Компания «БРОНИРУЙ»')
+					+e.slide.swiper-slide
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+					+e.slide.swiper-slide
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+					+e.slide.swiper-slide
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+					+e.slide.swiper-slide
+						+card('Валерия Котова', 'Салон мебели VALERIE')
+					+e.slide.swiper-slide
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+				.swiper-pagination
+	// end sExperts
+
+mixin card(name, company)
+	+b.person-card
+		+e.img-wrap.text-center: +img('img/sExperts-img-1.png')
+		+e.content.text-center
+			+e.name!= name
+			+e.company!= company

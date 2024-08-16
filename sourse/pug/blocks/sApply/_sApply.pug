@@ -1,0 +1,18 @@
+mixin sApply(data)
+	// start sApply
+	+b.SECTION.sApply.section#sApply&attributes(attributes)
+		+img('img/svg/flash-bg.svg').flash.flash-top
+		+img('img/svg/flash-bg.svg').flash.flash-bottom
+		.container
+			+img('img/svg/sApply-bg.svg').square.d-none.d-sm-block
+			+b.section-title.text-center
+				h2 Как стать участником?
+			+b.counter.cards-gr
+				+e.item
+					p Зарегистрироваться на платформе Росмолодёжь.Бизнес и подтвердить регистрацию через почту
+				+e.item
+					p В разделе «проекты» выбрать конкурс «Молодой предприниматель России» и подать заявку на участие
+				+e.item
+					p Получить одобрение заявки и приступить к выполнению конкурсных заданий
+			.text-center: +e.btn.btn.btn-light Подать заявку
+	// end sApply

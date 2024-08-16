@@ -17,6 +17,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
 }
+.icon-chevron-left {
+	$h: 12;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(19 / #{$h} *1em );
+}
+.icon-chevron-right {
+	$h: 12;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(19 / #{$h} *1em );
+}
 .icon-fb {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -38,9 +48,9 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-vk {
-	$h: 24;
+	$h: 67;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(108 / #{$h} *1em );
 }
 .icon-whatsapp {
 	$h: 16;

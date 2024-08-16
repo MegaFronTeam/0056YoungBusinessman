@@ -59,6 +59,33 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+    
+	const personsSwiper = new Swiper(".sExperts__slider--js", {
+
+		slidesPerView: 1,
+		spaceBetween: 50,
+		navigation: {
+			nextEl: ".sExperts .swiper-button-next",
+			prevEl: ".sExperts .swiper-button-prev",
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      }
+    }
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

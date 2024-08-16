@@ -1,0 +1,112 @@
+// start .sExperts
+.sExperts {
+	// --sPT: #{rem()};
+	--sPB: #{rem(170)};
+	--sTPB: #{rem(90)};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.container {
+		position: relative;
+	}
+	&__slider--js{
+		
+    margin: auto;
+    overflow: hidden;
+
+    @include media-breakpoint-up(sm) {
+    max-width: calc(100% - 100px);
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: calc(100% - 130px);
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: none;
+    }
+	}
+
+  .swiper-wrapper {
+    margin-bottom: rem(54);
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sExperts
+
+.person-card {
+  height: 100%;
+  img {
+    width: rem(245);
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: $blue;
+  }
+  &__img-wrap {
+    margin-bottom: rem(35);
+  }
+  &__content {
+    max-width: rem(240);
+    margin: auto;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: rem(20);
+    margin-bottom: rem(10);
+  }
+}
+
+.swiper-button-disabled {
+  opacity: .3;
+}
+
+.swiper-button-hand-prev {
+  @include media-breakpoint-down(xxl) {
+    left: 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    transform: translateX(-18px);
+  }
+}
+
+.swiper-button-hand-next {
+  @include media-breakpoint-down(xxl) {
+    right: 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    transform: translateX(18px);
+  }
+}
+.swiper-pagination-bullet {
+  @include media-breakpoint-up(md) {
+    margin-right: rem(24);
+  }
+}
+
+.swiper-button-hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --swiperArrowSize: #{rem(36)};
+  border-color: transparent;
+  z-index: 10;
+  bottom: 10px;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  .icon {
+    font-size: rem(16);
+    stroke: black;
+    stroke-width: 2px;
+  }
+}

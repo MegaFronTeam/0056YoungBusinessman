@@ -2,8 +2,25 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+			+img('img/svg/circles.svg').circles
+			+b.section-title
+				h2 КОнтакты
 			+e.row.row
+				+e.col.col-md-7
+					+e.item
+						a(href='mailto:kzhdanov@business.fadm.gov.ru') kzhdanov@business.fadm.gov.ru
+					+e.item.mt-wrap
+						p Для вопросов:
+					+e.item
+						a(href="tel:+78002343391") +7 (800) 234 33 91
+						p Лиги «Начинающий предприниматель» и «Продвинутый предприниматель»
+					+e.item
+						a(href="tel:+78002346733") +7 (800) 234 67 33
+						p Лига «Молодёжь с идеями»
+				+e.col.col-md-5
+					+e.item.mb-wrap
+						p Сообщество ВК:
+					a(href='#'): +icon('vk')
+
+
 	// end sContact

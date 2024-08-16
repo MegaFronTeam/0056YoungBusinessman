@@ -1,0 +1,94 @@
+// start .sQuestions
+.sQuestions {
+	// --sPT: #{rem()};
+	--sPB: #{rem(0)};
+	--sTPB: #{rem(60)};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+
+  .dd-group {
+    &__head {
+      padding: rem(33) rem(21);
+      padding-bottom: rem(30);
+      // padding-right: rem(15);
+      font-size: rem(16);
+      background: $white;
+      cursor: pointer;
+      color: $gray-700;
+      font-weight: 700;
+      line-height: 120%;
+      display: flex;
+      gap: rem(10);
+      justify-content: space-between;
+      align-items: center;
+      @include media-breakpoint-up(md) {
+        font-size: rem(20);
+      }
+      &:after {
+				@include mt;
+				content: '';
+        flex-shrink: 0;
+				display: inline-block;
+				width: rem(30);
+				height: rem(30);
+				background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='20' fill='black' /%3E%3Cpath d='M8 20H32' stroke='white' stroke-width='2' /%3E%3Cpath d='M20 8L20 32' stroke='white' stroke-width='2' /%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				margin-left: rem(4);
+				vertical-align: middle;
+        @include media-breakpoint-up(md) {
+          width: rem(40);
+          height: rem(40);
+        }
+			}
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.active {
+				.dd-group__head:after {
+					transform: rotate(135deg);
+				}
+			}
+		}
+    &__content {
+      transform: translateY(-1px);
+      background: $white;
+      color: $black;
+      line-height: 120%;
+      padding: 0 15% rem(30) rem(25);
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sQuestions
+
+.dd-group__content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
