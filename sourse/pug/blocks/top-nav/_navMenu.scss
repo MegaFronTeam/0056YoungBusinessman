@@ -3,8 +3,17 @@
 
 		display: flex;
 		text-align: center;
+    justify-content: flex-end;
 		@include roww(20px);
+    gap: rem(14);
 		flex-wrap: wrap;
+
+
+    a {
+      color: black;
+      background: #efefef;
+      border-radius: 59px;
+    }
 	}
 
 	list-style: none;
@@ -17,9 +26,13 @@
 		// margin-right: 0;
 		padding: 0;
 	}
-	a{
+	a {
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+    padding: rem(7) rem(11);
+    color: white;
+    // min-width: rem(87);
+    font-weight: 500;
+    font-size: rem(14);
 	}
 }
 

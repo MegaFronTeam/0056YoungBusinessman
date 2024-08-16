@@ -2,24 +2,42 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+  background: $white;
+  padding: rem(19) 0;
+	&__row {
+    align-items: center;
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
 			--bs-gutter-y: var(--bs-gutter-x);
 		// }
+    @include media-breakpoint-up(lg) {
+      margin-right: rem(-40);
+    }
 
 	}
 	.section-title{
 		
 	}
 	&__col{
-
+    @include media-breakpoint-down(md) {
+			padding: 0;
+			margin: 0;
+		}
 	}
 	&__item{
 
 	}
-	&__slide{
-		height: auto;
+	&__logo {
+		display: inline-block;
+		// max-width: 70%;
+		width: 100%;
+		max-width: 484px;
+		img {
+			width: 100%;
+		}
+    @include media-breakpoint-up(xl) {
+      margin-left: rem(-40);
+    }
 	}
 
 

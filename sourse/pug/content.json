@@ -1,16 +1,20 @@
 {
 	"nav":[
-		{ "name":"Для кого", "url":"#"},
-		{	"name":"Номинации", "url":"#"},
-		{"name":"Этапы", "url":"#"},
-		{"name":"Призы", "url":"#"} ,
+		{ "name":"Для кого", "url":"#sForWhom"},
+		{	"name":"Номинации", "url":"#sNominations"},
+		{"name":"Этапы", "url":"#sSteps"},
+		{"name":"Призы", "url":"#sAdvantages"} ,
+		{
+			"name":"Истории успеха", 
+			"url":"#sStories"
+    },
 		{
 			"name":"Партнёры", 
-			"url":"#"
+			"url":"#sPartners"
 			},
 		{
 			"name":"Контакты", 
-			"url":"#"
+			"url":"#sContact"
 			}
 	],
 	"social":[

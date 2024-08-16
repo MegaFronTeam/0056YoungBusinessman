@@ -22,13 +22,14 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col.col-lg-5
+					+e.logo(href="/"): +img('img/svg/logo.svg')
+				+e.col.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
 					
-				.col-auto.d-lg-none
+				.col-auto.d-lg-none.ms-auto
 					+menu-toggle()
 	// end top-nav
