@@ -2,10 +2,27 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.row.row
+				+e.col.col-lg-4
+					+b.section-title
+						.h1 89 регионов
+							+img('img/svg/tail.svg').tail
+					.h4 3 лиги:
+					ul.ul_colored.ul_left
+						li «Молодёжь с идеями»
+						li «Начинающий предприниматель»
+						li «Продвинутый предприниматель»
+				+e.col.col.order-last
+					+e.img-wrap: +img('img/header-bg.png').img
+				+e.col.col-lg-5.order-lg-last
+					+img('img/svg/lines.svg').lines
+					+img('img/svg/apple-sm.svg').apple
+					+img('img/svg/light.svg').light
+					+img('img/svg/target.svg').target
+					ul.ul_colored.ul_right
+						li ДЕЙСТВУЙ.
+						li СОЗДАВАЙ.
+						li УПРАВЛЯЙ.
+					.text-center: +e.btn.btn.btn-light(href='#') Подать заявку
+
 	// end headerBlock
