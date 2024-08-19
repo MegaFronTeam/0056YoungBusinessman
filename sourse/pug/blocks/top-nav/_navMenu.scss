@@ -119,12 +119,12 @@
 			position: absolute; 
 			left: 0;
 			right: auto;
-			color: #FFF;
+			// color: black;
 			top: 10px;
 			z-index: 9999; 
 			span:after,
 			span:before {
-				--color: #ffffff;
+				--color: black;
 			}
 		}
 		&__inner {

@@ -7,8 +7,8 @@
 	overflow: hidden;
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
     @include media-breakpoint-up(lg) {
+      --bs-gutter-y: var(--bs-gutter-x);
       min-height: rem(580);
     }
 	}

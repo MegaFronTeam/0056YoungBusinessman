@@ -3,7 +3,23 @@ mixin sForWhom(data)
 	+b.SECTION.sForWhom.section#sForWhom&attributes(attributes)
 		.container
 			+b.section-title
-				h2 sForWhom
-				
-			+e.row.row
+				h2 Для кого?
+			+e.wrapper
+				+e.ages
+					+e.item 14 лет
+					+e.item 16 лет
+					+e.item 18 лет
+					+e.item 35 лет
+				+forCard('«Молодёжь с идеями»', 'Для школьников, студентов и всех желающих открыть своё дело')
+				+forCard('«Начинающий предприниматель»', 'В бизнесе от 1 года до 3 лет')
+					p Для самозанятых, индивидуальных предпринимателей, юридических лиц
+				+forCard('«Продвинутый предприниматель»', 'В бизнесе от 3 до 5 лет')
+					p Для индивидуальных предпринимателей, юридических лиц
 	// end sForWhom
+
+mixin forCard(title, text)
+	+b.LI.for-card
+		.h4 ЛИГА
+		.h4= title
+		p= text
+			block
