@@ -55,6 +55,7 @@
     margin-bottom: rem(35);
     position: relative;
     width: max-content;
+    max-width: 100%;
 
     &::before {
       content: '';
