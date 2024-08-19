@@ -8,23 +8,23 @@ mixin sExperts(data)
 			+e.slider--js
 				.swiper-wrapper
 					+e.slide.swiper-slide
-						+card('Вадим Кульков', 'Компания «БРОНИРУЙ»')
+						+card('Вадим Кульков', 'Компания «БРОНИРУЙ»', 1)
 					+e.slide.swiper-slide
-						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople', 1)
 					+e.slide.swiper-slide
-						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople', 1)
 					+e.slide.swiper-slide
-						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople', 1)
 					+e.slide.swiper-slide
-						+card('Валерия Котова', 'Салон мебели VALERIE')
+						+card('Валерия Котова', 'Салон мебели VALERIE', 1)
 					+e.slide.swiper-slide
-						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople')
+						+card('Ольга Клинг', 'Генеральный директор ЛюдиPeople', 1)
 				.swiper-pagination
 	// end sExperts
 
-mixin card(name, company)
+mixin card(name, company, i)
 	+b.person-card
-		+e.img-wrap.text-center: +img('img/sExperts-img-1.png')
+		+e.img-wrap.text-center: +img(`img/sExperts-img-${i}.png`)
 		+e.content.text-center
 			+e.name!= name
 			+e.company!= company

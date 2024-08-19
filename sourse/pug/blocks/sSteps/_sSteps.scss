@@ -18,7 +18,7 @@
         .arrow {
           display: inline-block;
           position: absolute;
-          z-index: -1;
+          z-index: 0;
           right: calc(100% + 20px);
           top: 0;
           transform: translateY(16px);
@@ -41,6 +41,8 @@
 } // end.sSteps
 
 .step-card {
+  position: relative;
+
   &__text {
     position: relative;
     margin-bottom: rem(45);
