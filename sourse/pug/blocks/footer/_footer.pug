@@ -1,9 +1,10 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col.col-lg-5
+					+e.logo(href="/"): +img('img/svg/logo.svg')
+				.col-12.col-lg.order-last
+					+mnu()
+				.col-auto.links.order-lg-last
+					a(href='#'): +icon('vk')
