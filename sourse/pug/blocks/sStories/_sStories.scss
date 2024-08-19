@@ -28,6 +28,7 @@
       max-width: none;
     }
 	}
+
   .swiper-button-hand {
     bottom: -80px;
   }
@@ -35,6 +36,15 @@
   .swiper-wrapper {
     margin-bottom: rem(45);
     align-items: center;
+    @include media-breakpoint-up(lg) {
+      min-height: rem(390);
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: rem(500);
+    }
+    @include media-breakpoint-up(xxl) {
+      min-height: rem(671);
+    }
   }
 
 	@include media-breakpoint-up(lg) {
@@ -72,7 +82,7 @@
   position: relative;
   z-index: 1;
   aspect-ratio: 362/487;
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
 
   &:after {
     content: '';
