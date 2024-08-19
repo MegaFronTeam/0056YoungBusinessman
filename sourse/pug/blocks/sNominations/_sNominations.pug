@@ -1,9 +1,30 @@
 mixin sNominations(data)
 	// start sNominations
 	+b.SECTION.sNominations.section#sNominations&attributes(attributes)
-		.container
+		+e.container.container
+			+img('img/sNominations-bg-1.png').bg-1
+			+img('img/sNominations-bg-2.png').bg-2
+			+img('img/sNominations-bg-3.png').bg-3
 			+b.section-title
-				h2 sNominations
-				
-			+e.row.row
+				h2 Готов заявить о себе и получить звание молодого предпринимателя России? 
+				+img('img/sNominations-bg-4.png').bg-4
+			mixin tag(text)
+				.col-sm-auto: +e.tag
+					+iconC("double-done")
+					!= text
+			+e.row
+				.row
+					+tag('Социальный бизнес')
+					+tag('Международный бизнес')
+					+tag('Креативный бизнес')
+					+tag('Инновационно-технологическое предпринимательство')
+					+tag('Производство')
+					+tag('Классическое предпринимательство')
+					+tag('Агробизнес')
+					+tag('Женский бизнес')
+					+tag('Семейный бизнес')
+					+tag('#БизнесМыВместе')
+					+tag('Транспортный бизнес')
+					+tag('Экологическое предпринимательство')
+			+e.btn.btn.btn-primary(href='#') Подать заявку
 	// end sNominations
