@@ -2,13 +2,13 @@
 	// start .sContact
 	.sContact {
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	--sTPB: #{rem(20)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(24)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
-	
+	overflow: hidden;
   .container {
     position: relative;
     z-index: 2;
