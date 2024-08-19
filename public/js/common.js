@@ -86,6 +86,31 @@ function eventHandler() {
       }
     }
 	});
+
+  const storiesSwiper = new Swiper(".sStories__slider--js", {
+
+		slidesPerView: 1,
+		spaceBetween: 50,
+		navigation: {
+			nextEl: ".sStories .swiper-button-next",
+			prevEl: ".sStories .swiper-button-prev",
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        initialSlide: 1,
+      }
+    }
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

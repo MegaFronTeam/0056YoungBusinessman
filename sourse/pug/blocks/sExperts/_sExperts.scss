@@ -1,6 +1,6 @@
 // start .sExperts
 .sExperts {
-	// --sPT: #{rem()};
+	--sPT: #{rem(10)};
 	--sPB: #{rem(170)};
 	--sTPB: #{rem(90)};
 	
@@ -12,7 +12,6 @@
 		position: relative;
 	}
 	&__slider--js{
-		
     margin: auto;
     overflow: hidden;
 

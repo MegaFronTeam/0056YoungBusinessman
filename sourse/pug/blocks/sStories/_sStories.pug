@@ -4,6 +4,26 @@ mixin sStories(data)
 		.container
 			+b.section-title
 				h2 Истории успеха
-				
-			+e.row.row
+			+e.slider--js
+				+arrow
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+cardStories(1, 'Григорьев Вячеслав Георгиевич')
+					+e.slide.swiper-slide
+						+cardStories(2, 'Тарасов Олег Васильевич')
+					+e.slide.swiper-slide
+						+cardStories(3, 'Трофименков Иван Андреевич')
+					+e.slide.swiper-slide
+						+cardStories(1, 'Григорьев Вячеслав Георгиевич')
+					+e.slide.swiper-slide
+						+cardStories(3, 'Трофименков Иван Андреевич')
+				.swiper-pagination
 	// end sStories
+
+
+mixin cardStories(i, text)
+	+b.card-stories
+		+img(`img/sStories-${i}.png`).img
+		+e.content
+			+e.text= text
+			+e.btn.btn.btn-sm.btn-primary(href='#') ЧИТАТЬ ИСТОРИЮ
