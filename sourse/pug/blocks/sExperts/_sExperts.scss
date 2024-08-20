@@ -14,9 +14,10 @@
 	&__slider--js{
     margin: auto;
     overflow: hidden;
+    max-width: calc(100% - 60px);
 
     @include media-breakpoint-up(sm) {
-    max-width: calc(100% - 100px);
+      max-width: calc(100% - 100px);
     }
 
     @include media-breakpoint-up(md) {
@@ -47,7 +48,6 @@
     max-width: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    // background: $blue;
     filter: saturate(0);
   }
   &__img-wrap {
@@ -116,9 +116,9 @@
   border-color: transparent;
   z-index: 10;
   bottom: 10px;
-  @include media-breakpoint-down(md) {
-    display: none;
-  }
+  // @include media-breakpoint-down(md) {
+  //   display: none;
+  // }
 
   .icon {
     font-size: rem(16);
