@@ -103,6 +103,13 @@
 	}
 	&__btn {
 		--bs-btn-padding-y: #{rem(17.5)};
+
+		display: block;
+		max-width: max-content;
+		@include media-breakpoint-down(sm) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}
