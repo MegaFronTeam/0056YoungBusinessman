@@ -1,5 +1,5 @@
 /**
- * Swiper Custom Element 11.1.9
+ * Swiper Custom Element 11.1.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 31, 2024
+ * Released on: August 21, 2024
  */
 
 (function () {
@@ -5506,6 +5506,16 @@
         }
       }
     }
+    function getMoveDirection(prevIndex, nextIndex, length) {
+      prevIndex = prevIndex % length;
+      nextIndex = nextIndex % length;
+      if (nextIndex === prevIndex + 1) {
+        return 'next';
+      } else if (nextIndex === prevIndex - 1) {
+        return 'previous';
+      }
+      return;
+    }
     function onBulletClick(e) {
       const bulletEl = e.target.closest(classesToSelector(swiper.params.pagination.bulletClass));
       if (!bulletEl) {
@@ -5515,7 +5525,14 @@
       const index = elementIndex(bulletEl) * swiper.params.slidesPerGroup;
       if (swiper.params.loop) {
         if (swiper.realIndex === index) return;
-        swiper.slideToLoop(index);
+        const moveDirection = getMoveDirection(swiper.realIndex, index, swiper.slides.length);
+        if (moveDirection === 'next') {
+          swiper.slideNext();
+        } else if (moveDirection === 'previous') {
+          swiper.slidePrev();
+        } else {
+          swiper.slideToLoop(index);
+        }
       } else {
         swiper.slideTo(index);
       }
@@ -6791,6 +6808,8 @@
       if (currentScale === 1 && forceZoomRatio) {
         touchX = undefined;
         touchY = undefined;
+        image.touchesStart.x = undefined;
+        image.touchesStart.y = undefined;
       }
       const maxRatio = getMaxRatio();
       zoom.scale = forceZoomRatio || maxRatio;
@@ -6864,6 +6883,8 @@
       }
       zoom.scale = 1;
       currentScale = 1;
+      image.touchesStart.x = undefined;
+      image.touchesStart.y = undefined;
       gesture.imageWrapEl.style.transitionDuration = '300ms';
       gesture.imageWrapEl.style.transform = 'translate3d(0,0,0)';
       gesture.imageEl.style.transitionDuration = '300ms';
@@ -9644,7 +9665,7 @@
   }
 
   /**
-   * Swiper 11.1.9
+   * Swiper 11.1.10
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
@@ -9652,7 +9673,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: July 31, 2024
+   * Released on: August 21, 2024
    */
 
 
@@ -9979,7 +10000,7 @@
   }
 
   /**
-   * Swiper Custom Element 11.1.9
+   * Swiper Custom Element 11.1.10
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
@@ -9987,7 +10008,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: July 31, 2024
+   * Released on: August 21, 2024
    */
 
 
