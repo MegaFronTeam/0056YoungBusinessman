@@ -54,7 +54,7 @@
 			width: 100%;
 			max-width: rem(270);
 			margin-left: auto;
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(xxl) {
 				max-width: rem(455);
 				position: absolute;
 				top: rem(140);
@@ -62,7 +62,7 @@
 				transform: rotate(-7.26deg);
 				z-index: -3;
 			}
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(xxl) {
 				right: rem(26);
 			}
 		}

@@ -76,6 +76,7 @@
     background: $primary;
     display: inline-block;
     border-radius: rem(100);
+    text-wrap: nowrap;
   }
   .tail {
     position: absolute;
